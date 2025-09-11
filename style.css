@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Parkinsans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  line-height: 1.6;
+}
+
+.nav-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #4f46e5;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-head a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-head a:hover {
+  color: #ffcb05;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  background: #ffffff;
+}
+
+.about .text {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 2rem;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4f46e5;
+}
+
+.about p {
+  margin-bottom: 1.5rem;
+}
+
+.about .link a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.6rem 1rem;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.about .link a:hover {
+  background: #ffcb05;
+  color: #333;
+}
+
+.about .image {
+  flex: 1;
+  text-align: center;
+}
+
+.about img {
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.skill {
+  padding: 4rem 2rem;
+  background: #f0f9ff;
+  text-align: center;
+}
+
+.skill-text h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+.about img,
+.testi_picture img {
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about img:hover,
+.testi_picture img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25); 
+}
+
+
+.skill-text p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.skilled_topic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.skilled_topic i {
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.skilled_topic i:hover {
+  transform: translateY(-5px);
+  background: #ffcb05;
+  color: #333;
+}
+
+.testimonial {
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+.testimonial h2 {
+  text-align: center;
+  color: #4f46e5;
+  margin-bottom: 2rem;
+}
+
+.testi_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.testi_picture {
+  text-align: center;
+}
+
+.testi_picture img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+.testi_text {
+  max-width: 600px;
+  background: #f0f9ff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact {
+  padding: 4rem 2rem;
+  background: #fef9c3;
+}
+
+.contact h2 {
+  text-align: center;
+  color: #4f46e5;
+  margin-bottom: 2rem;
+}
+
+.con-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.con-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.con-form {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.con-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.con-form input,
+.con-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.con-form button {
+  padding: 0.8rem 1.5rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.con-form button:hover {
+  background: #ffcb05;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #4f46e5;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .text {
+    margin-right: 0;
+  }
+
+  .con-container {
+    flex-direction: column;
+  }
+
+  .testi_container {
+    flex-direction: column;
+  }
+}
