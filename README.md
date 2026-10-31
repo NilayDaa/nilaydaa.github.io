@@ -1,38 +1,21 @@
-# Hi, I'm Nilay 👋
+# Nilay Das — Cybersecurity & AI Portfolio
 
-🎓 ICT Student @ JAMK University (Cybersecurity) · Helsinki
-🔐 Aspiring Cybersecurity & AI Engineer
-⚡ Focused on SOC, DevSecOps, AI/LLM security, embedded web apps
+Portfolio site served at **https://nilaydaa.github.io/**
 
----
+Cybersecurity + AI portfolio with an interactive SOC-ops hero: a drag-to-rotate 3D server-rack scene with animated network traffic, threat and defense modes, and a five-station carousel (SOC Lab, SIEM Dashboard, Endpoint Defense, Cloud Attack Surface, AI Defense).
 
-## 🧭 About Me
+## Pages
+- **Home** — hero + interactive panel + skill marquee + section launcher
+- **Projects** — 6 projects in filtered groups (Detection & SOC / AI-ML / Web & automation) with notes dialogs
+- **About** — bio + terminal portrait
+- **Toolkit** — SOC/detection tooling, languages, cloud/devopps, AI security
+- **Learning** — certification track + 12-week roadmap
+- **Contact** — email copy + links
 
-ICT student at JAMK University of Applied Sciences (cybersecurity specialization), Helsinki. I build hands-on: Lorris (3v3 trick-taking card game at lorris.nilaydas.com) and AI Job Agent (Python/FastAPI + Playwright + PostgreSQL). Currently hunting cybersecurity / AI / software-dev internships in Finland. Learning trading discipline with a €10 paper budget — education over get-rich schemes.
+## Tech
+Plain HTML/CSS/JS. No build step, no external fonts or CDNs — works offline and deploys as-is via GitHub Pages (served from `main`).
 
----
-
-## 🛠️ Tech Stack
-
-**Languages:** Python, JavaScript, C#, Java, C, SQL
-**Security / Cloud:** Cybersecurity (SOC, Wazuh, pen-test), Azure, DevSecOps, Docker/K8s
-**AI / ML:** LLMs, Sentence-Transformers, FastAPI, Playwright
-**Web:** React, Spring Boot, Node.js
-**Tools:** Git, VS Code, Docker, Linux, PowerShell
-
----
-
-## 📌 Featured Projects
-
-| Project | Description | Status |
-|---|---|---|
-| **Lorris** | 3v3 trick-taking card game — Java/Spring + React, live at lorris.nilaydas.com | ✅ Live |
-| **AI Job Agent** | Automated job scraping + resume matching with LLMs (Python/FastAPI, Playwright, PostgreSQL, Redis) | 🔨 Active |
-
----
-
-## 📫 Contact Me
-
-- 📧 Email: nilaydas.ndc@gmail.com / dasniloy39@gmail.com
-- 💼 LinkedIn: linkedin.com/in/nilay-das-b3485532b
-- 🌐 Portfolio: nilaydaa.github.io
+## Local run
+```bash
+python3 -m http.server 8000   # then open http://localhost:8000
+```

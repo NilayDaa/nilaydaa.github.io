@@ -1,228 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nilay Das | Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1210">
+  <meta name="description" content="Nilay Das — Cybersecurity & AI student at JAMK University of Applied Sciences, Finland. SOC operations, detection engineering, automation and AI security.">
+  <meta property="og:title" content="Nilay Das — Cybersecurity & AI">
+  <meta property="og:description" content="Closer to the wire. A portfolio of SOC operations, detection engineering, and AI security.">
+  <meta property="og:type" content="website">
+  <title>Nilay Das — Cybersecurity & AI</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
 </head>
-<body>
-  <nav class="nav-head">
-    <div class="left_nav">
-      <a href="index.html">Nilay Das</a>
-    </div>
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a href="./index.html" class="brand" aria-label="Nilay Das, home"><span class="brand-mark">n<span>.</span></span><span>NILAY DAS<small>CYBERSECURITY / AI</small></span></a>
+  <nav aria-label="Main navigation"><a href="./index.html" aria-current="page">Home</a><a href="./projects.html">Projects</a><a href="./about.html">About</a><a href="./toolkit.html">Toolkit</a><a href="./learning.html">Learning</a><a href="./contact.html">Let's talk</a></nav>
+  <button id="motion-toggle" class="motion-button" type="button" aria-pressed="false" aria-label="Pause animations" title="Pause animations"><span aria-hidden="true">Ⅱ</span><span class="motion-text">Motion</span></button>
+  <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="./index.html" aria-current="page">Home</a><a href="./projects.html">Projects</a><a href="./about.html">About</a><a href="./toolkit.html">Toolkit</a><a href="./learning.html">Learning</a><a href="./contact.html">Let's talk</a></nav>
 
-    <div class="link">
-        <a href="#skill"><i class="fa-solid fa-code"></i> Skills</a>
-        <a href="#testimonial"><i class="fa-solid fa-pen"></i> Testimonials</a>
-        <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
-        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+<main id="main">
+<section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot"></span> OPEN TO INTERNSHIP &amp; THESIS OPPORTUNITIES</p>
+    <h1 id="hero-title">Closer to<br>the <em>wire.</em></h1>
+    <p class="hero-description">I'm Nilay. I build at the intersection of <strong>security operations, automation, and applied AI</strong> — detecting the attack before it lands, then teaching a machine to watch for it.</p>
+    <p class="hero-location"><span aria-hidden="true">⌖</span> JAMK University of Applied Sciences · Finland</p>
+    <div class="hero-actions"><a class="button primary" href="./projects.html">Explore my projects <span aria-hidden="true">↘</span></a><a class="button text-button" href="https://github.com/NilayDaa" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+    <div class="hero-topics"><span>SOC OPS</span><span>DETECTION</span><span>PYTHON / AI</span><span>AZURE</span></div>
+  </div>
+
+  <div class="ops-panel">
+    <div class="panel-topline"><span><span class="status-dot"></span> INTERACTIVE SOC STUDY</span><span id="ops-position">01 / 05</span></div>
+    <div class="ops-stage" id="ops-stage" data-mode="traffic" data-station="0" aria-label="Interactive 3D illustration of a SOC operations environment; drag to rotate">
+      <div class="ops-scene">
+        <div class="ops-sway">
+          <div class="ops-rig" id="ops-rig">
+            <svg class="link-layer" viewBox="0 0 680 460" aria-hidden="true">
+              <g class="link-line"><path d="M215 322 C 320 282, 400 252, 480 228"/><path d="M150 222 C 142 280, 172 312, 200 326"/><path d="M284 160 C 360 130, 430 142, 505 182" class="long"/></g>
+              <circle class="packet p1" cx="0" cy="0" r="4.5"/>
+              <circle class="packet p2" cx="0" cy="0" r="4.5"/>
+              <circle class="packet p3" cx="0" cy="0" r="4.5"/>
+              <circle class="packet packet-red pr1" cx="0" cy="0" r="5"/>
+              <circle class="packet packet-red pr2" cx="0" cy="0" r="5"/>
+            </svg>
+            <div class="dash-monitor">
+              <span class="dash-head">SIEM / LIVE</span>
+              <div class="dash-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="dash-ticker" id="dash-ticker">10.0.0.117 ssh brute-force attempt — blocked</span>
+            </div>
+            <div class="fw-appliance"><i class="vent v1"></i><i class="vent v2"></i><i class="vent v3"></i><small>EDGE-FW / 01</small></div>
+            <div class="rack" id="rack">
+              <div class="blade"><span class="blade-label">WAZUH-INDEX</span><i class="b-led"></i><i class="b-led"></i><i class="b-led"></i></div>
+              <div class="blade"><span class="blade-label">SURICATA-01</span><i class="b-led"></i><i class="b-led"></i><i class="b-led"></i></div>
+              <div class="blade"><span class="blade-label">THEHIVE-CASE</span><i class="b-led"></i><i class="b-led"></i><i class="b-led"></i></div>
+              <div class="blade"><span class="blade-label">AGENT-UPLINK</span><i class="b-led"></i><i class="b-led"></i><i class="b-led"></i></div>
+            </div>
+            <span class="ops-node n-mon"><i class="node-dot"></i>MONITOR / SIEM</span>
+            <span class="ops-node n-fw"><i class="node-dot"></i>EDGE</span>
+            <span class="ops-node n-rack"><i class="node-dot"></i>SERVER RACK</span>
+            <div class="alert-strip" data-layer="threats"><span>⚠</span><strong id="alert-text">CRIT — BRUTE-FORCE SSH 10.0.0.117 → 10.0.0.5</strong></div>
+            <div class="defense-ticks" data-layer="defense"><i>✓ HOSTS ISOLATED</i><i>✓ ALERT TRIAGED</i><i>✓ IOCs SHARED</i></div>
+            <div class="ops-callout"><span></span><small>WAZUH / SIEM</small><strong>SOC LAB</strong></div>
+          </div>
+        </div>
       </div>
-
-    <div class="right_nav">
-      <a href="mailto:ag3567@student.jamk.fi" target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="https://gitlab.labranet.jamk.fi/AG3567" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-gitlab"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/nilay-das-b3485532b" target="_blank" rel="noopener noreferrer">
-         <i class="fa-brands fa-linkedin"></i>
-      </a>
-
+      <span class="stage-label">DRAG TO ROTATE <span aria-hidden="true">⤢</span></span>
+      <button class="reset-view" id="reset-view" type="button">Reset view ↺</button>
     </div>
-  </nav>
-
-  <section class="about" id="about">
-    <div class="text">
-      <h2>Hi, I'm Nilay 👋</h2>
-      <p>
-        Nilay Das — ICT student at JAMK University (cybersecurity specialization), Helsinki. Building Lorris (3v3 card game) and AI Job Agent. Hunting cybersecurity / AI / software-dev internships in Finland. Learning trading with a €10 paper budget (education + risk discipline).
-      </p>
-
-      
-    </div>
-
-    <div class="image">
-      <img class="head_picture" src="Image/N2.jpg" alt="Portrait of Nilay Das">
-    </div>
-  </section>
-
-  <section class="skill" id="skill">
-  <div class="skill-text">
-    <h2><span class="section-head">Skills</span></h2>
-    <p>
-      I bring a mix of technical and creative skills to the table. My expertise spans programming, design, and networking — 
-      backed by teamwork and leadership abilities that help me excel in collaborative environments.
-    </p>
+    <div class="ops-controls" aria-label="Illustration modes"><button type="button" class="active" data-mode="traffic" aria-pressed="true">01 Traffic</button><button type="button" data-mode="threats" aria-pressed="false">02 Threats</button><button type="button" data-mode="defense" aria-pressed="false">03 Defense</button></div>
+    <div class="ops-navigation"><button id="ops-prev" type="button" aria-label="Previous station">←</button><div aria-live="polite" aria-atomic="true"><h2 id="ops-title">SOC LAB</h2><p id="ops-subtitle">Wazuh · Suricata · TheHive · network taps</p></div><button id="ops-next" type="button" aria-label="Next station">→</button></div>
+    <div class="ops-readout"><span id="ops-readout-text">NETFLOW: 1,283 PPS · 2 TUNNELS</span><span class="readout-light"></span></div>
+    <p class="simulation-caption">Interactive 3D illustration · simulated activity</p>
   </div>
-  <div class="skilled_topic">
-    <div class="skill-card">
-      <i class="fa-brands fa-python"></i>
-      <h4>Python</h4>
-      <p>Experienced in scripting, automation, and security-related tasks.</p>
-    </div>
-    <div class="skill-card">
-      <i class="fa-brands fa-js"></i>
-      <h4>JavaScript</h4>
-      <p>Building interactive and responsive web applications.</p>
-    </div>
-    <div class="skill-card">
-      <i class="fa-solid fa-network-wired"></i>
-      <h4>Networking</h4>
-      <p>Knowledge of protocols, security practices, and troubleshooting.</p>
-    </div>
-    <div class="skill-card">
-      <i class="fa-solid fa-pen-nib"></i>
-      <h4>Photoshop</h4>
-      <p>Designing creative visuals and digital artwork.</p>
-    </div>
-    <div class="skill-card">
-      <i class="fa-solid fa-video"></i>
-      <h4>Premiere Pro</h4>
-      <p>Editing professional-quality videos and storytelling content.</p>
-    </div>
-    <div class="skill-card">
-      <i class="fa-solid fa-users"></i>
-      <h4>Leadership</h4>
-      <p>Leading projects and motivating teams to achieve results.</p>
-    </div>
-    <div class="skill-card">
-      <i class="fa-solid fa-people-group"></i>
-      <h4>Group Work</h4>
-      <p>Strong communication and collaboration in multicultural teams.</p>
-    </div>
-  </div>
+
+  <div class="hero-bottom"><span>DETECT. RESPOND. AUTOMATE.</span><a href="./projects.html">OPEN PROJECTS <span aria-hidden="true">↗</span></a></div>
 </section>
 
+<div class="skills-marquee" aria-label="Core areas"><div><span>THREAT HUNTING</span><i>✳</i><span>DETECTION ENGINEERING</span><i>✳</i><span>INCIDENT RESPONSE</span><i>✳</i><span>AI-GUARDED DEVELOPMENT</span><i>✳</i></div></div>
 
-  <section class="testimonial" id="testimonial">
-  <h2><span class="section-head">Testimonials</span></h2>
-  <div class="testi_container">
-    
-    <div class="testi_item">
-      <div class="testi_picture">
-        <img src="Image/N1.jpg" alt="Nilay Das">
-        <h4>Nilay Das</h4>
-        <p>ICT Student <br> Cybersecurity Enthusiast</p>
-      </div>
-      <div class="testi_text">
-        <p>
-          Nilay is an ICT student at JAMK University of Applied Sciences, recognized for his creativity and passion for cybersecurity. 
-          He consistently demonstrates a strong ability to approach challenges with innovative thinking, whether it’s technical problem-solving 
-          or coming up with unique project ideas. Nilay is also an excellent communicator who ensures every team member feels valued and heard, 
-          making him not only reliable but also a motivating presence in group work.
-        </p>
-      </div>
-    </div>
-
-    <div class="testi_item">
-      <div class="testi_picture">
-        <img src="Image/OIP.webp" alt="Colleague 1">
-        <h4>John Smith</h4>
-        <p>Project Teammate</p>
-      </div>
-      <div class="testi_text">
-        <p>
-          Working with Nilay was one of the most rewarding experiences during my studies. 
-          His technical knowledge, especially in Python scripting and network troubleshooting, 
-          often helped us overcome project bottlenecks. Beyond his skills, what impressed me most was his patience 
-          and willingness to explain complex concepts in simple terms. He always brought positivity to the group, 
-          ensuring deadlines were met without compromising quality. Nilay is a true team player and future leader.
-        </p>
-      </div>
-    </div>
-
-    <div class="testi_item">
-      <div class="testi_picture">
-        <img src="Image/N3.jpg" alt="Colleague 2">
-        <h4>Maria Lopez</h4>
-        <p>Classmate</p>
-      </div>
-      <div class="testi_text">
-        <p>
-          Nilay’s dedication to learning and improving himself is inspiring. 
-          During our group assignments, he often took the initiative to guide the workflow, 
-          distribute tasks fairly, and ensure everyone contributed equally. His leadership style is approachable, 
-          combining encouragement with accountability. Technically, his strengths in cybersecurity stood out — 
-          he was quick to identify vulnerabilities and suggest practical solutions, which greatly improved the quality of our projects. 
-          I’m confident he will excel in any professional environment.
-        </p>
-      </div>
-    </div>
-
+<section class="page-launcher section-wrap" aria-labelledby="launcher-title">
+  <p class="eyebrow">EXPLORE THE PORTFOLIO</p>
+  <h2 id="launcher-title">Choose your next <em>destination.</em></h2>
+  <div class="launcher-grid">
+    <a class="launcher-card" href="./projects.html"><span class="mono">01 / PROJECTS</span><h3>Projects <span aria-hidden="true">↗</span></h3><p>Detection labs, automations and AI tools — built in public.</p></a>
+    <a class="launcher-card" href="./about.html"><span class="mono">02 / ABOUT</span><h3>About <span aria-hidden="true">↗</span></h3><p>My background, studies and why security meets machine learning.</p></a>
+    <a class="launcher-card" href="./toolkit.html"><span class="mono">03 / TOOLKIT</span><h3>Toolkit <span aria-hidden="true">↗</span></h3><p>Languages, detection tooling and cloud platforms I work with.</p></a>
+    <a class="launcher-card" href="./learning.html"><span class="mono">04 / LEARNING</span><h3>Learning <span aria-hidden="true">↗</span></h3><p>Training in progress and my full 12-week security + AI roadmap.</p></a>
+    <a class="launcher-card" href="./contact.html"><span class="mono">05 / LET'S TALK</span><h3>Let's talk <span aria-hidden="true">↗</span></h3><p>Internship, thesis and collaboration opportunities.</p></a>
   </div>
 </section>
+</main>
 
-
-
-    <section class="education" id="education">
-    <div class="education-text">
-      <h2><span class="section-head">Education</span></h2>
-      <p>
-        My academic journey has shaped both my technical foundation and problem-solving mindset. 
-        Here’s a glimpse into my educational background:
-      </p>
-    </div>
-
-    <div class="edu-container">
-      <div class="edu-item">
-        <h3>JAMK University of Applied Sciences</h3>
-        <p><strong>Bachelor’s Degree in ICT Engineering (Cybersecurity)</strong></p>
-        <p>2024 – Present</p>
-        <p>
-          Focusing on cybersecurity, networking, and programming while engaging in practical projects 
-          that bridge theory with real-world applications.
-        </p>
-      </div>
-
-      <div class="edu-item">
-        <h3>Notre Dame College, Dhaka</h3>
-        <p><strong>High School</strong></p>
-        <p>2020 - 2022</p>
-        <p>
-          Gained professional skills in Physics, Math, Chemistry and Biology.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="contact" id="contact">
-    <h2><span class="section-head">Contact</span></h2>
-    <div class="con-container">
-      <div class="con-text">
-        <p>
-          Feel free to reach out for inquiries, collaborations, or just to connect. 
-          You can contact me via email or through my social media profiles.
-        </p>
-      </div>
-      <div class="con-form">
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message">Write your message here</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Nilay Das. All Rights Reserved.</p>
-  </footer>
+<footer class="section-wrap site-footer"><a class="brand-mark" href="./index.html" aria-label="Home">n<span>.</span></a><p>© <span id="year">2026</span> Nilay Das <span>/</span> Cybersecurity &amp; AI</p><div><a href="https://github.com/NilayDaa" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:nilaydas.ndc@gmail.com">Email ↗</a><a href="./index.html">Home ↑</a></div></footer>
 </body>
 </html>
