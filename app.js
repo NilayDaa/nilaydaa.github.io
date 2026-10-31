@@ -46,6 +46,11 @@ const revealObserver = new IntersectionObserver(entries => entries.forEach(entry
   if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
 }), { threshold: .08 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+/* Safety net: never let a section stay hidden (opacity 0) — force-show anything the
+   observer hasn't revealed shortly after load, so no page ever reads as empty. */
+window.setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
+}, 2000);
 
 const copyEmail = document.getElementById('copy-email');
 if (copyEmail) copyEmail.addEventListener('click', async () => {
@@ -343,7 +348,7 @@ const visualByType = { detection: detectionVisual, ai: aiVisual, web: webVisual 
 function projectCard(p, i) {
   const gh = p.repo ? `href="${p.url}"` : '';
   const ghLabel = p.repo ? 'GitHub ↗' : '';
-  return `<article class="project-card reveal" data-category="${p.type}" data-project="${p.id}">
+  return `<article class="project-card" data-category="${p.type}" data-project="${p.id}">
     <div class="project-visual"><span class="visual-label">${p.label}</span>${visualByType[p.type]()}<span class="visual-caption">ILLUSTRATIVE WORKFLOW</span></div>
     <div class="project-body"><span class="project-index">${String(i + 1).padStart(2, '0')} / ${p.type.toUpperCase()}</span><h4>${p.name}</h4><p>${p.description}</p>
       <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
@@ -367,7 +372,7 @@ if (groupsContainer) {
       visible.push(...items);
       const grid = document.createElement('div');
       if (items.length) {
-        grid.className = 'project-group reveal';
+        grid.className = 'project-group';
         grid.innerHTML = `<div class="project-group-heading"><h3>${g.label}</h3><span>${items.length} PROJECT${items.length > 1 ? 'S' : ''}</span></div><div class="project-grid">${items.map((p, i) => projectCard(p, i)).join('')}</div>`;
       }
       groupsContainer.appendChild(grid);
